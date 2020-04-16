@@ -6,6 +6,9 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
+import ArrowBackIosRoundedIcon from '@material-ui/icons/ArrowBackIosRounded';
+import ArrowForwardIosRoundedIcon from '@material-ui/icons/ArrowForwardIosRounded';
+import deepPurple from '@material-ui/core/colors/deepPurple';
 
 import { AppContext } from '../../App';
 
@@ -22,6 +25,9 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   appBar: {
+    height: '6rem',
+    alignItems: 'center',
+    justifyContent: 'center',
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${DRAWER_WIDTH}px)`,
       marginLeft: DRAWER_WIDTH,
@@ -63,9 +69,23 @@ function NavigationBar(props) {
         >
           <MenuIcon />
         </IconButton>
+        <IconButton aria-label="back">
+          <ArrowBackIosRoundedIcon />
+        </IconButton>
         <Typography variant="h6" noWrap>
-          INAB
+          APR 2020
         </Typography>
+        <IconButton aria-label="forward">
+          <ArrowForwardIosRoundedIcon />
+        </IconButton>
+        <span style={{ backgroundColor: '#4caf50', padding: '.5rem', borderRadius: '.5rem' }}>
+          <Typography variant="subtitle1" noWrap>
+            $1,000
+          </Typography>
+          <Typography variant="subtitle2" align="center" noWrap>
+            To be budgeted
+          </Typography>
+        </span>
       </Toolbar>
     </AppBar>
   );

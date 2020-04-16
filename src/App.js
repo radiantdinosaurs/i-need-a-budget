@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+// TODO: Add in PropTypes
 // import PropTypes from 'prop-types';
 
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -6,6 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
+// TODO: Fix dependency cycle
 import NavigationBar from './components/NavigationBar/NavigationBar';
 import NavigationDrawer from './components/NavigationDrawer/NavigationDrawer';
 // import Budget from './components/Budget/Budget';
@@ -33,7 +35,7 @@ function reducer(state, action) {
   }
 }
 
-function App(props) {
+function App() {
   const { root } = useStyles();
   const [state, dispatch] = useReducer(reducer, initialState);
 
