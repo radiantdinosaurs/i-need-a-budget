@@ -79,11 +79,11 @@ function NavigationBar(props) {
           <ArrowForwardIosRoundedIcon />
         </IconButton>
         <span style={{ backgroundColor: '#4caf50', padding: '.5rem', borderRadius: '.5rem' }}>
-          <Typography variant="subtitle1" noWrap>
-            $1,000
+          <Typography variant="caption" align="center" noWrap>
+            <em>To be budgeted</em>
           </Typography>
-          <Typography variant="subtitle2" align="center" noWrap>
-            To be budgeted
+          <Typography variant="subtitle1" align="center" noWrap>
+            $1,000
           </Typography>
         </span>
       </Toolbar>

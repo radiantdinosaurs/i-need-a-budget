@@ -4,8 +4,8 @@ import deepPurple from '@material-ui/core/colors/deepPurple';
 
 export const THEME = createMuiTheme({
   palette: {
-    primary: pink,
-    secondary: deepPurple,
+    primary: deepPurple,
+    secondary: pink,
   },
   typography: {
     fontFamily: [
