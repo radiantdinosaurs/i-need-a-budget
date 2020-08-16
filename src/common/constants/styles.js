@@ -22,5 +22,3 @@ export const THEME = createMuiTheme({
     ].join(','),
   },
 });
-
-export const DRAWER_WIDTH = 200;
