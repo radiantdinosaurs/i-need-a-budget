@@ -15,6 +15,7 @@ import { useAuth0 } from '@auth0/auth0-react';
  ***************************** */
 import Budget from '../budget/Budget';
 import Home from '../home/Home';
+import Login from '../login/Login'
 
 /** ****************************
  * Styles
@@ -55,6 +56,9 @@ function EntryPoint() {
             <Route exact path="/">
               <Home />
             </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
             <PrivateRoute exact path="/budget">
               <Budget />
             </PrivateRoute>
@@ -62,7 +66,7 @@ function EntryPoint() {
           {isAuthenticated ? (
             <Redirect to="/budget" />
           )
-            : 'Not logged in'}
+            : <Redirect to="/login" />}
         </div>
       </ThemeProvider>
     </Router>
